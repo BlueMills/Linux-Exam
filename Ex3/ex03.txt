@@ -1,0 +1,44 @@
+gedit ex03.txt
+gedit Fruits.info
+cat > Fruits.info
+Watermelon#10#0.60
+Apple#29#2.40
+Kiwi#4#4.50
+Raspberry#123#10.20
+Blackberry#456#12.34
+Avocado#345#9.00
+cut -d '#' -f 1 Fruits.info | sort
+stdout:
+Apple
+Avocado
+Blackberry
+Kiwi
+Raspberry
+Watermelon
+cut -d '#' -f 2 Fruits.info | sort -n
+stdout:
+4
+10
+29
+123
+345
+456
+cut -d '#' -f 3 Fruits.info | sort -n | tail -n 1 > fruit
+OR:
+cut -d '#' -f 3 Fruits.info | sort -rn | head -n 1 > fruit
+cut -d '#' -f 1,2,3 Fruits.info | head -n 3| sort -n -k 3 -t '#'
+stdout:
+Watermelon#10#0.60
+Apple#29#2.40
+Kiwi#4#4.50
+
+ADDTIONAL: SAME COMMAND FOR THE LAST 3 LINES
+
+cut -d '#' -f 1,2,3 Fruits.info | tail -n 3| sort -n -k 3 -t '#'
+stdout:
+Avocado#345#9.00
+Raspberry#123#10.20
+Blackberry#456#12.34
+
+-----------------------------------------------
+

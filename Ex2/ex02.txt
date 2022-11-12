@@ -1,0 +1,22 @@
+gedit ex02.txt
+sudo su
+adduser examuser
+id
+groupadd examgroup
+groupadd strypes
+usermod -a -G examgroup examuser
+usermod -a -G strypes examuser
+cp /etc/passwd ~
+su examuser 
+id
+su mila
+cd
+ls -l
+sudo chown examuser:strypes /etc/passwd
+ls -l /etc/passwd --> stdout: -rw-r--r-- 1 examuser strypes 2838 nov 12 00:20 /etc/passwd
+sudo su
+chmod -R 752 /etc/passwd --> stdout: -rwxr-x-w- 1 examuser strypes 2838 nov 12 00:20 /etc/passwd
+chmod -R u=rwx,g=rx,o=w /etc/passwd --> stdout: -rwxr-x-w- 1 examuser strypes 2838 nov 12 00:20 /etc/passwd
+cd
+mv ex02.txt Documents
+----------------------------------------------------------

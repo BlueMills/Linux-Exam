@@ -1,0 +1,26 @@
+mkdir "Linux Exam"
+cd "Linux Exam"
+mkdir Files Strypes
+ls
+cd Files
+touch doc{1..5}.txt
+touch report{1..5}.doc
+touch results{1..5}.doc
+touch statistics1.xls statistics2.xls
+cd ..
+cd Strypes
+mkdir Day01 Day02
+ls
+cd ..
+tree
+cd Files
+cp *.txt ../Strypes/Day01
+mv *.doc ../Strypes/Day02
+mv statistics1.xls .statistics1.xls
+ls -A
+cd ..
+cd Strypes
+rm -r Day02
+history | tail -n 30 | cut -d ' ' -f 4- ex01.txt
+mv ex01.txt Documents
+----------------------------------------------------------------

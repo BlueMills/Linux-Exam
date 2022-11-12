@@ -1,0 +1,44 @@
+gedit ex04.txt
+git --version
+git version 2.34.1
+git config --global user.name "BlueMills"
+mkdir StrypesTest
+cd StrypesTest
+git clone https://github.com/BlueMills/Linux-Exam.git
+ls
+cd Linux-Exam
+echo "# Linux-Exam" >> README.md
+ls --> stdout: README.md
+mkdir Ex1 Ex2 Ex3 Ex4
+cd
+cd Documents
+cp ex0.txt ~/StrypesTest/Linux-Exam/Ex1
+cp ex02.txt ~/StrypesTest/Linux-Exam/Ex2
+cp ex03.txt ~/StrypesTest/Linux-Exam/Ex3
+cp ex04.txt ~/StrypesTest/Linux-Exam/Ex4
+cd
+cd StrypesTest/Linux-Exam
+git status
+STDOUT:
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Ex1/
+	Ex2/
+	Ex3/
+	Ex4/
+	README.md
+git add --all
+git status
+STDOUT:
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   Ex1/ex01.txt
+	new file:   Ex2/ex02.txt
+	new file:   Ex3/ex03.txt
+	new file:   Ex4/ex04.txt
+	new file:   README.md
+
