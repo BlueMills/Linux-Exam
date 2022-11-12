@@ -41,4 +41,17 @@ Changes to be committed:
 	new file:   Ex3/ex03.txt
 	new file:   Ex4/ex04.txt
 	new file:   README.md
+git commit -m "Added Files"
+STDOUT:
+[main (root-commit) c3f4a1e] Added Files
+ 5 files changed, 137 insertions(+)
+ create mode 100644 Ex1/ex01.txt
+ create mode 100644 Ex2/ex02.txt
+ create mode 100644 Ex3/ex03.txt
+ create mode 100644 Ex4/ex04.txt
+ create mode 100644 README.md
+ls
+STDOUT:
+Ex1  Ex2  Ex3  Ex4  README.md
+git push
 
